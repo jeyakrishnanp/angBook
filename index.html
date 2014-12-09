@@ -13,14 +13,19 @@
 		<script src="./libs/angular/angular-route.min.js" type="text/javascript"></script>
 		
 		<script src="./js/app.js" type="text/javascript"></script>
+		<script src="./js/models/User.js" type="text/javascript"></script>
 		<script src="./js/controllers/LoginController.js" type="text/javascript"></script>
 		<script src="./js/controllers/FeedController.js" type="text/javascript"></script>
 		<script src="./js/controllers/ProfileController.js" type="text/javascript"></script>
 
+		<link href="./assets/styles/angBook.css" rel="stylesheet" type="teext/css" />
+
 	</head>
 	<body>
-		<div data-ng-include="'./views/header.html'"></div>
-		<div data-ng-include="'./views/main.html'"></div>
-		<div data-ng-include="'./views/footer.html'"></div>
+		<div data-ng-include="'./views/header.html'" class='container-fluid header'></div>
+		<!--<div data-ng-include="'./views/main.html'" class='main'></div>-->
+		<div class='main' data-ng-view> </div>
+
+		<div data-ng-include="'./views/footer.html'" class='container-fluid footer'></div>
 	</body>
 </html>

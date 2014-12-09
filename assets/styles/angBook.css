@@ -1,0 +1,23 @@
+html, body {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+	font-family: "Verdana";
+	font-size: 11px;
+}
+
+.header {
+	height:100px;
+	width:100%;
+}
+
+.main {
+	height: calc(100% - 130px);
+}
+
+.footer {
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 5px;
+}

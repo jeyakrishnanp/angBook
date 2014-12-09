@@ -1,0 +1,29 @@
+<div id="profile" class="profile">
+	<div id="profileDetail" class="profileDetail">
+		<div>
+			<input type = "text" id="name" placeholder = "Name"/>
+		</div>
+		<div>
+			<input type = "text" id="age" placeholder = "Age"/>
+		</div>
+		<div>
+			<input type = "text" id="phone" placeholder = "Phone"/>
+		</div>
+		<div>
+			<input type = "text" id="email" placeholder = "Email"/>
+		</div>
+		<div>
+			<textarea rows="8" cols="22" placeholder = "Address" id="address"></textarea>
+		</div>
+		<div>
+			<input type = "text" id="imageName" placeholder = "Profile image" readonly="readonly"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="file" id="imageFile" name="imageFile" accept="image/*" onchange="showImage(this)"/>
+		</div>
+		<div>
+			<input type = "button" value = "Save" onclick = "saveProfile()"/>
+		</div>
+	</div>
+	<div id = "profileImage" class="profileImage">
+		<img id="previewField" src="../img/no-image.jpg" alt="Profile Picture" style="height: 150px;  width: 100px;"/>
+	</div>
+</div>
