@@ -1,0 +1,11 @@
+<ul class="nav  nav-pills nag-tabs  nav-justified" data-ng-show="userData.isIn" data-ng-controller="MenuCtrl">
+	<li role="presentation" ng-class="{ active : isSelectedMenu(1) }">
+		<a  data-ng-click="menuClick(1)">Home</a>
+	</li>
+	<li role="presentation" ng-class="{ active : isSelectedMenu(2) }">
+		<a  data-ng-click="menuClick(2)">Feed <span class="badge">{{feedData.feedCount || 0}}</span></a>
+	</li>
+	<li role="presentation" ng-class="{ active : isSelectedMenu(3) }">
+		<a data-ng-click="menuClick(3)">Profile</a>
+	</li>
+</ul>

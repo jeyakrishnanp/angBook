@@ -1,6 +1,6 @@
 'use strict';
 
-var book = angular.module('angbook', ['ngRoute']);
+var book = angular.module('angBook', ['ngRoute']);
 
 book.config(function($routeProvider) {
 	$routeProvider
@@ -8,6 +8,10 @@ book.config(function($routeProvider) {
 			{
 				controller  : 'LoginCtrl',
 				templateUrl : './templates/plain.html'
+			})
+		.when('/home',
+			{
+				templateUrl : './templates/home.html'
 			})
 		.when('/mybook',
 			{

@@ -7,12 +7,17 @@ html, body {
 }
 
 .header {
-	height:100px;
+	height:85px;
+	width:100%;
+}
+
+.menu {
+	height:50px;
 	width:100%;
 }
 
 .main {
-	height: calc(100% - 130px);
+	height: calc(100% - 165px);
 }
 
 .footer {
