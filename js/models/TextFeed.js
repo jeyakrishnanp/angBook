@@ -1,13 +1,18 @@
 'use strict';
 
-book.factory('TextFeed', ['Feed', function(feed) {
+book.factory('TextFeed', function(Feed) {
 
 	/* Text Feed function and its prototype */
-	function TextFeed(text) {
+	function TextFeed(id, text) {
 
+		Feed.call(this, id, 'TEXT');
 		this.text = text;
-		this.type = "TEXT";
 	}
-			
+
+	TextFeed.prototype = Object.create(Feed.prototype);
+	TextFeed.prototype.getFeed = function() {
+		return this.text;
+	}
+
 	return TextFeed;
-}]);
+});

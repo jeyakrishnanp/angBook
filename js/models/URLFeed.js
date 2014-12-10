@@ -1,13 +1,18 @@
 'use strict';
 
-book.factory('URLFeed', ['Feed', function(feed) {
+book.factory('URLFeed', function(Feed) {
 
 	/* URL Feed function and its prototype */
-	function URLFeed(url) {
+	function URLFeed(id, url) {
 
+		Feed.call(this, id, 'URL');
 		this.url = url;
-		this.type = "URL";
+	}
+
+	URLFeed.prototype = Object.create(Feed.prototype);
+	URLFeed.prototype.getFeed = function() {
+		return this.url;
 	}
 
 	return URLFeed;
-}]);
+});

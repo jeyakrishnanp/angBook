@@ -1,48 +1,6 @@
+'use strict';
 
-book.service("FeedsService", function() {
-
-	/* Feed function and its prototype */
-	var Feed = function(id, type) {
-		this.id = id;
-		this.type = type;
-		this.date = new Date();
-	}
-
-	Feed.prototype =  {
-		getID: function(){
-			return this.id;
-		},
-		getType: function() {
-			return this.type;	
-		},
-		getDateTime: function() {
-			return this.date;
-		}
-	};
-
-	/* Text Feed function and its prototype */
-	var TextFeed = function(id, text) {
-
-		this.text = text;
-		Feed.call(this, id, 'TEXT');
-	}
-
-	TextFeed.prototype = Object.create(Feed.prototype);
-	TextFeed.prototype.getFeed = function() {
-		return this.text;
-	}
-
-	/* URL Feed function and its prototype */
-	var URLFeed = function(id, url) {
-
-		this.url = url;
-		Feed.call(this, id, 'URL');
-	}
-
-	URLFeed.prototype = Object.create(Feed.prototype);
-	URLFeed.prototype.getFeed = function() {
-		return this.url;
-	}
+book.service("FeedsService", function(URLFeed, TextFeed) {
 
 	var feeds = [];
 
@@ -62,14 +20,12 @@ book.service("FeedsService", function() {
 		} else {
 			feed = new TextFeed(feeds.length, feedValue);	
 		}
-	
-		feed._id = feeds.length + 1;
-		feed.type
+
 		if (feedValue.length > 0) {
 			addFeedService(feed);
 		}
 	};
-	
+
 	/* Delete a Feed */
 	this.deleteFeed = function(id) {	
 		deleteFeedService(id);

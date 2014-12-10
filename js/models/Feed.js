@@ -9,5 +9,17 @@ book.factory('Feed', [function() {
 		this.date = new Date();
 	}
 
+	Feed.prototype =  {
+		getID: function(){
+			return this.id;
+		},
+		getType: function() {
+			return this.type;	
+		},
+		getDateTime: function() {
+			return this.date;
+		}
+	};
+
 	return Feed;
 }]);
